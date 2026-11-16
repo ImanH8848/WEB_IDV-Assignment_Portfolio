@@ -1,0 +1,209 @@
+/* Hero section styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 40px;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  z-index: 10;
+}
+
+.content-container {
+  padding: 60px 10px;
+  margin: 30px 0;
+  position: relative;
+}
+
+/* Hero typography styles */
+.hero-title {
+  font-family: 'Aspect Range', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 100;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff, #888888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #cccccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #aaaaaa;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* Button styles */
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #cccccc;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Two-column layout styles */
+.line-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.line-left {
+  font-size: 2rem;
+  color: #bbbbbb;
+  max-width: 350px;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.line-right {
+  font-size: 1rem;
+  color: #bbbbbb;
+  max-width: 370px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.hero .decorative-line {
+  width: 1px;
+  height: 150px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+}
+
+/* Profile image styles */
+.profile-image-container {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  padding: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.profile-image:hover {
+  transform: translateY(-12px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.profile-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Decorative elements */
+.decorative-flower {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750px;
+  height: 750px;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decorative-flower img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(1.5);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { 
+    transform: translateX(-50%) translateY(0);
+  }
+  40% { 
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% { 
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
